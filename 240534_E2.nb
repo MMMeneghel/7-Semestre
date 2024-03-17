@@ -1,0 +1,584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21917,        576]
+NotebookOptionsPosition[     19103,        519]
+NotebookOutlinePosition[     19539,        536]
+CellTagsIndexPosition[     19496,        533]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Exerc\[IAcute]cio 2", "Section",
+ CellChangeTimes->{{3.9196775837731524`*^9, 
+  3.9196775877403164`*^9}},ExpressionUUID->"d0045aec-8c2a-4274-90d6-\
+d168001457ee"],
+
+Cell[CellGroupData[{
+
+Cell["Dados", "Subtitle",
+ CellChangeTimes->{{3.9192778976423492`*^9, 3.919277899907725*^9}, {
+  3.9196775558486443`*^9, 
+  3.919677573306865*^9}},ExpressionUUID->"05230abb-0eba-414e-a3d2-\
+aad67959f4e0"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"fatMen", " ", "=", " ", "400000.00"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"faturamento", " ", "mensal", " ", "em", " ", "reais"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CD", " ", "=", " ", "100000.00"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"custo", " ", "direto", " ", "em", " ", "reais"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"distancia", " ", "=", "200"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"dist\[AHat]ncia", " ", "da", " ", "obra", " ", "em", " ", "km"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"prazo", "=", "3"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "prazo", " ", "de", " ", "execu\[CCedilla]\[ATilde]o", " ", "em", " ", 
+    "meses"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"diasUteis", "=", "22"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"dias", " ", "\[UAcute]teis", " ", "de", " ", "trabalho"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"trabSemanal", "=", "0.5"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"trabalho", " ", "por", " ", "semana", " ", "em", " ", "dias"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"viagens", "=", "8"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "n\[UAcute]mero", " ", "de", " ", "visitas", " ", "\[AGrave]", " ", 
+    "obra"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pedagio", "=", "12.60"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "valor", " ", "do", " ", "ped\[AAcute]gio", " ", "em", " ", "reais"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"custoTrans", "=", "0.57"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"custo", " ", "do", " ", "transporte", " ", "em", " ", 
+    RowBox[{"reais", "/", "km"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"salarioMensal", "=", "4000.00"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"sal\[AAcute]rio", " ", "do", " ", "engenheiro", " ", "em", " ", 
+    RowBox[{"reais", "/", "m\[EHat]s"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"leiSocial", "=", "76.27"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"taxa", " ", "de", " ", "leis", " ", "sociais"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"admCentral", "=", "25586.91"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"despesas", " ", "da", " ", "adm", " ", "central", " ", "em", " ", 
+    RowBox[{"reais", "/", "m\[EHat]s"}]}], 
+   "*)"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9192779419077654`*^9, 3.91927852388593*^9}, {
+  3.9194503504580097`*^9, 3.9194503961102266`*^9}, {3.9194505655085444`*^9, 
+  3.919450597819863*^9}, {3.9195094777869587`*^9, 3.9195094816604347`*^9}, {
+  3.9196763225291853`*^9, 3.919676335115294*^9}, {3.919676376537386*^9, 
+  3.919676664031416*^9}},
+ CellLabel->
+  "In[382]:=",ExpressionUUID->"85b4fa0d-846f-4de1-a569-aa5f69c36f46"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outras Taxas", "Subtitle",
+ CellChangeTimes->{{3.9192785485299177`*^9, 
+  3.9192785616026144`*^9}},ExpressionUUID->"449137e9-e7a9-4c38-88e6-\
+d10533b15c44"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"taxas", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "1000.", ",", "1500.", ",", "0.", ",", "1000.", ",", "350.", ",", 
+      "200."}], "}"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "conjunto", " ", "de", " ", "taxas", " ", "diversas", " ", "em", " ", 
+    "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"totalTaxas", "=", 
+    RowBox[{"Total", "[", "taxas", "]"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"somat\[OAcute]rio", " ", "das", " ", "taxas"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TR", "=", "0"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"taxa", " ", "de", " ", "risco"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CF", "=", "0"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"custo", " ", "financeiro"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"COR", "=", "0"}], ";"}], " ", 
+  RowBox[{"(*", "corretagem", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"IMP", "=", "0.0834"}], ";"}], " ", 
+  RowBox[{"(*", "imposto", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"L", "=", "0.1"}], " ", ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"lucro", " ", "desejado"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.9192785706627593`*^9, 3.9192786245154157`*^9}, {
+   3.9192786653615913`*^9, 3.919278700842939*^9}, {3.9192789103155017`*^9, 
+   3.919278941140551*^9}, {3.919278989928808*^9, 3.9192792441782875`*^9}, {
+   3.9192793790746627`*^9, 3.9192793902126455`*^9}, {3.9192794565737944`*^9, 
+   3.919279467306642*^9}, 3.9192795357254105`*^9, {3.919279566193267*^9, 
+   3.919279582220746*^9}, {3.919280383534727*^9, 3.919280527857802*^9}, {
+   3.919676696101778*^9, 3.91967676287565*^9}},
+ CellLabel->
+  "In[394]:=",ExpressionUUID->"7aa8aacc-45c5-455a-800b-2b084f95348b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rateio da Administra\[CCedilla]\[ATilde]o Central", "Subtitle",
+ CellChangeTimes->{{3.919278789793988*^9, 
+  3.919278809023843*^9}},ExpressionUUID->"ddc27ee5-f80f-4060-9177-\
+2b48ead678e6"],
+
+Cell["\<\
+\[CapitalEAcute] necess\[AAcute]rio estimar um BDI, neste caso assumiremos \
+BDI = 50 %. Dessa forma, o pre\[CCedilla]o de venda (PV) ser\[AAcute] o custo \
+direto mais 50% dele. \
+\>", "Text",
+ CellChangeTimes->{{3.91967714055807*^9, 
+  3.919677284418597*^9}},ExpressionUUID->"8dfbc784-67a8-4636-a108-\
+2fe98e41283a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"DMAC", "=", 
+    RowBox[{"totalTaxas", "+", "admCentral"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "despesa", " ", "mensal", " ", "da", " ", "adm", " ", "central", " ", "em",
+     " ", "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PVconsiderado", "=", 
+    RowBox[{"CD", "+", 
+     RowBox[{"CD", "*", ".5"}]}]}], " ", ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Custo", " ", "direto"}], " ", "+", " ", 
+    RowBox[{"50", "%", "CD"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FMO", "=", 
+    RowBox[{"PVconsiderado", "/", "prazo"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "faturamento", " ", "mensal", " ", "da", " ", "obra", " ", "em", " ", 
+    "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Nm", "=", "prazo"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"prazo", " ", "da", " ", "obra", " ", "em", " ", "meses"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FMAC", "=", "fatMen"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "faturamento", " ", "mensal", " ", "da", " ", 
+    "administra\[CCedilla]\[ATilde]o", " ", "central", " ", "em", " ", 
+    "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CDTO", "=", "CD"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "custo", " ", "direto", " ", "total", " ", "da", " ", "obra", " ", "em", 
+    " ", "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Rateio", "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"DMAC", "*", "FMO", "*", "Nm"}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"FMAC", "*", "CDTO"}], ")"}]}], ")"}]}], ";"}], 
+  RowBox[{"(*", "%", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<\[CapitalIAcute]ndice Rateio: \>\"", ",", "Rateio"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9192788231234355`*^9, 3.9192788932281823`*^9}, {
+  3.919279448151888*^9, 3.9192795002881737`*^9}, {3.9192796490962505`*^9, 
+  3.9192796548442225`*^9}, {3.919279684874728*^9, 3.919279898615718*^9}, {
+  3.9192806264483423`*^9, 3.9192807248020678`*^9}, {3.919280910738411*^9, 
+  3.9192809318116827`*^9}, {3.919280976675446*^9, 3.9192809890060053`*^9}, {
+  3.9192817504804344`*^9, 3.9192817582279367`*^9}, {3.9194508075533113`*^9, 
+  3.9194508082718883`*^9}, {3.9194514119749327`*^9, 3.9194514708205395`*^9}, {
+  3.9194515162572074`*^9, 3.919451570651305*^9}, {3.919509550568493*^9, 
+  3.9195097019944067`*^9}, {3.919676832350439*^9, 3.9196769219781017`*^9}, {
+  3.919677119906714*^9, 3.919677135668602*^9}, {3.919677291760624*^9, 
+  3.9196773594875927`*^9}, {3.9196775069504156`*^9, 3.919677525978557*^9}},
+ CellLabel->
+  "In[417]:=",ExpressionUUID->"1201f6df-e051-4053-b90b-07aa21d05c0f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[CapitalIAcute]ndice Rateio: \"\>", "\[InvisibleSpace]", 
+   "0.1111384125`"}],
+  SequenceForm["\[CapitalIAcute]ndice Rateio: ", 0.1111384125],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9195096627680693`*^9, 3.9195097029316835`*^9, 
+  3.9196773662178993`*^9, 3.919677528180485*^9},
+ CellLabel->
+  "During evaluation of \
+In[417]:=",ExpressionUUID->"6ec038cd-07e1-4f8f-a5ab-ff44acf93bd5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Despesas Engenheiro e Viagem", "Subtitle",
+ CellChangeTimes->{{3.9192799531870375`*^9, 3.919279960044742*^9}, {
+  3.919450798147*^9, 
+  3.9194508019427786`*^9}},ExpressionUUID->"0b37f89c-83ee-4b52-9f6a-\
+93d8b6b0b2fe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"salarioDia", "=", 
+   RowBox[{"salarioMensal", "/", "diasUteis"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"sal\[AAcute]rio", " ", "do", " ", "engenheiro", " ", "em", " ", 
+    RowBox[{"reais", "/", "dia"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"totDiasTrab", "=", 
+   RowBox[{"viagens", "+", 
+    RowBox[{"prazo", "*", "4", "*", "trabSemanal"}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"total", " ", "de", " ", "dias", " ", "trabalhados"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"totSalario", "=", 
+   RowBox[{"salarioDia", "*", "totDiasTrab", "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"leiSocial", "/", "100"}]}], ")"}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "total", " ", "do", " ", "sal\[AAcute]rio", " ", "para", " ", "essa", " ", 
+    "obra", " ", "em", " ", "reais"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DIEngenheiro", "=", 
+   RowBox[{"(", 
+    RowBox[{"totSalario", "/", "CD"}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<\[CapitalIAcute]ndice Despesa Engenheiro: \>\"", ",", "DIEngenheiro"}],
+   "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"totViagem", "=", 
+   RowBox[{"viagens", "*", "2", "*", 
+    RowBox[{"(", 
+     RowBox[{"pedagio", "+", 
+      RowBox[{"custoTrans", "*", "distancia"}]}], ")"}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "total", " ", "de", " ", "gastos", " ", "com", " ", "as", " ", "viagens", 
+    " ", "at\[EAcute]", " ", "a", " ", "obra", " ", "em", " ", "reais"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DIViagem", "=", 
+   RowBox[{"totViagem", "/", "CD"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<\[CapitalIAcute]ndice Despesa Viagem: \>\"", ",", "DIViagem"}],
+   "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.919279975535515*^9, 3.9192801518229237`*^9}, {
+  3.9192814071678386`*^9, 3.919281464387231*^9}, {3.919281771350526*^9, 
+  3.91928179473767*^9}, {3.9192821271038294`*^9, 3.91928213499265*^9}, {
+  3.919402346626088*^9, 3.9194023812067547`*^9}, {3.919402423428363*^9, 
+  3.9194024329356604`*^9}, {3.9194025302115345`*^9, 3.9194025449936657`*^9}, {
+  3.919402640726074*^9, 3.9194026494460316`*^9}, {3.9194499033779707`*^9, 
+  3.9194499327308083`*^9}, {3.919450420397397*^9, 3.919450552232682*^9}, {
+  3.9194506086926346`*^9, 3.919450619935959*^9}, {3.9194506720853024`*^9, 
+  3.9194507226784983`*^9}, {3.919450845523638*^9, 3.9194508529617386`*^9}, {
+  3.919451131010067*^9, 3.919451140694641*^9}, {3.91950974156172*^9, 
+  3.9195098230513515`*^9}, {3.919676522467416*^9, 3.9196765247019343`*^9}, {
+  3.919676952810043*^9, 3.919677074447345*^9}},
+ CellLabel->
+  "In[401]:=",ExpressionUUID->"1c619929-9b67-46e7-914d-4da3f9e36eb1"],
+
+Cell[BoxData["181.8181818181818`"], "Output",
+ CellChangeTimes->{{3.9192814098540316`*^9, 3.919281431083412*^9}, 
+   3.9192814651837554`*^9, 3.9192817983026853`*^9, 3.9194025637053986`*^9, 
+   3.9194505096212344`*^9, 3.9194506214661646`*^9, 3.9194507271923804`*^9, 
+   3.919451141741227*^9, 3.919509794326414*^9, 3.919509825447546*^9, 
+   3.9196770800817747`*^9},
+ CellLabel->
+  "Out[401]=",ExpressionUUID->"17954ced-6d53-4e2f-8cea-ac3d1e75af28"],
+
+Cell[BoxData["14.`"], "Output",
+ CellChangeTimes->{{3.9192814098540316`*^9, 3.919281431083412*^9}, 
+   3.9192814651837554`*^9, 3.9192817983026853`*^9, 3.9194025637053986`*^9, 
+   3.9194505096212344`*^9, 3.9194506214661646`*^9, 3.9194507271923804`*^9, 
+   3.919451141741227*^9, 3.919509794326414*^9, 3.919509825447546*^9, 
+   3.919677080191742*^9},
+ CellLabel->
+  "Out[402]=",ExpressionUUID->"d1e921e0-be0b-431d-9c34-19aed3c4f52f"],
+
+Cell[BoxData["4486.872727272727`"], "Output",
+ CellChangeTimes->{{3.9192814098540316`*^9, 3.919281431083412*^9}, 
+   3.9192814651837554`*^9, 3.9192817983026853`*^9, 3.9194025637053986`*^9, 
+   3.9194505096212344`*^9, 3.9194506214661646`*^9, 3.9194507271923804`*^9, 
+   3.919451141741227*^9, 3.919509794326414*^9, 3.919509825447546*^9, 
+   3.919677080206704*^9},
+ CellLabel->
+  "Out[403]=",ExpressionUUID->"53f21e16-51b3-4d27-8cb2-22aa2209293a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[CapitalIAcute]ndice Despesa Engenheiro: \"\>", 
+   "\[InvisibleSpace]", "0.044868727272727275`"}],
+  SequenceForm[
+  "\[CapitalIAcute]ndice Despesa Engenheiro: ", 0.044868727272727275`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9195097943420277`*^9, 3.919509825463165*^9, 
+  3.919677080206704*^9},
+ CellLabel->
+  "During evaluation of \
+In[401]:=",ExpressionUUID->"673df9f4-f50b-4deb-8e5a-4fbe8b3ff8cf"],
+
+Cell[BoxData["2025.5999999999997`"], "Output",
+ CellChangeTimes->{{3.9192814098540316`*^9, 3.919281431083412*^9}, 
+   3.9192814651837554`*^9, 3.9192817983026853`*^9, 3.9194025637053986`*^9, 
+   3.9194505096212344`*^9, 3.9194506214661646`*^9, 3.9194507271923804`*^9, 
+   3.919451141741227*^9, 3.919509794326414*^9, 3.919509825447546*^9, 
+   3.919677080206704*^9},
+ CellLabel->
+  "Out[406]=",ExpressionUUID->"0d79dada-b6a5-4157-8185-60eeffd68fcf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[CapitalIAcute]ndice Despesa Viagem: \"\>", 
+   "\[InvisibleSpace]", "0.020256`"}],
+  SequenceForm["\[CapitalIAcute]ndice Despesa Viagem: ", 0.020256],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9195097943420277`*^9, 3.919509825463165*^9, 
+  3.919677080222369*^9},
+ CellLabel->
+  "During evaluation of \
+In[401]:=",ExpressionUUID->"54134fc0-f884-4f61-90e4-6767a3f6f96d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Benef\[IAcute]cios e Despesas Indiretas", "Subtitle",
+ CellChangeTimes->{{3.9192801932093153`*^9, 
+  3.9192802240160856`*^9}},ExpressionUUID->"85499909-3659-4b83-b667-\
+bcec78244ef6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"DI", "=", 
+   RowBox[{"DIEngenheiro", "+", "DIViagem", "+", "Rateio"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"BDI", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", "DI"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "TR"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "CF"}], ")"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"(", 
+        RowBox[{"IMP", "+", "COR", "+", "L"}], ")"}]}], ")"}]}], "-", "1"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<BDI = \>\"", ",", 
+   RowBox[{"BDI", "*", "100"}], ",", "\"\<%\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.919280317725374*^9, 3.9192803739293747`*^9}, {
+  3.9192810192702723`*^9, 3.9192810253154817`*^9}, {3.919281085777793*^9, 
+  3.919281092662503*^9}, {3.919281200272455*^9, 3.919281207614478*^9}, {
+  3.9192815147775307`*^9, 3.9192815606261234`*^9}, {3.9192816414241967`*^9, 
+  3.9192816553523045`*^9}, {3.9192817243645763`*^9, 3.919281727035816*^9}, {
+  3.9194511600602217`*^9, 3.919451214069128*^9}, {3.919451578571316*^9, 
+  3.9194515840197353`*^9}, {3.919509854001425*^9, 3.919509883264191*^9}, {
+  3.919510018823961*^9, 3.919510027525025*^9}, {3.9196775344296775`*^9, 
+  3.9196775349295597`*^9}},
+ CellLabel->
+  "In[425]:=",ExpressionUUID->"6fafb41f-1d0f-486d-93fd-75139a496b50"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"BDI = \"\>", "\[InvisibleSpace]", "44.0439798888963`", 
+   "\[InvisibleSpace]", "\<\"%\"\>"}],
+  SequenceForm["BDI = ", 44.0439798888963, "%"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9195098844663534`*^9, 3.9195100282273493`*^9, 
+  3.919677535772433*^9},
+ CellLabel->
+  "During evaluation of \
+In[425]:=",ExpressionUUID->"27773575-f8a1-4738-80b1-2f9af67231c5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pre\[CCedilla]o de Venda", "Subtitle",
+ CellChangeTimes->{{3.9192807964481506`*^9, 
+  3.9192808008540444`*^9}},ExpressionUUID->"d675c867-c3c7-4daf-ba01-\
+dfc3847af6a9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PV", "=", 
+   RowBox[{"CD", "+", 
+    RowBox[{"CD", "*", "BDI"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Pre\[CCedilla]o de Venda = R$ \>\"", ",", "PV"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9192808081808653`*^9, 3.9192808646989136`*^9}, {
+   3.9195098959578967`*^9, 3.9195099179995637`*^9}, {3.9195099925333056`*^9, 
+   3.9195100125638437`*^9}, 3.919510427122955*^9},
+ CellLabel->
+  "In[428]:=",ExpressionUUID->"b7610d34-9032-447f-9269-83ed93d1bf74"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Pre\[CCedilla]o de Venda = R$ \"\>", "\[InvisibleSpace]", 
+   "144043.97988889628`"}],
+  SequenceForm["Pre\[CCedilla]o de Venda = R$ ", 144043.97988889628`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.919509920498334*^9, 3.91951001328174*^9, 
+  3.9195104298410597`*^9, 3.9196775386155186`*^9},
+ CellLabel->
+  "During evaluation of \
+In[428]:=",ExpressionUUID->"f0364ec2-5497-4699-8dce-9da06666fc54"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1152, 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b95ef6c7-c959-4f23-b863-7b8eeaef7902"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 168, 3, 67, "Section",ExpressionUUID->"d0045aec-8c2a-4274-90d6-d168001457ee"],
+Cell[CellGroupData[{
+Cell[751, 27, 204, 4, 53, "Subtitle",ExpressionUUID->"05230abb-0eba-414e-a3d2-aad67959f4e0"],
+Cell[958, 33, 3019, 83, 257, "Input",ExpressionUUID->"85b4fa0d-846f-4de1-a569-aa5f69c36f46"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4014, 121, 162, 3, 53, "Subtitle",ExpressionUUID->"449137e9-e7a9-4c38-88e6-d10533b15c44"],
+Cell[4179, 126, 1873, 50, 162, "Input",ExpressionUUID->"7aa8aacc-45c5-455a-800b-2b084f95348b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6089, 181, 195, 3, 53, "Subtitle",ExpressionUUID->"ddc27ee5-f80f-4060-9177-2b48ead678e6"],
+Cell[6287, 186, 328, 7, 35, "Text",ExpressionUUID->"8dfbc784-67a8-4636-a108-2fe98e41283a"],
+Cell[CellGroupData[{
+Cell[6640, 197, 2832, 72, 221, "Input",ExpressionUUID->"1201f6df-e051-4053-b90b-07aa21d05c0f"],
+Cell[9475, 271, 446, 10, 22, "Print",ExpressionUUID->"6ec038cd-07e1-4f8f-a5ab-ff44acf93bd5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9970, 287, 224, 4, 53, "Subtitle",ExpressionUUID->"0b37f89c-83ee-4b52-9f6a-93d8b6b0b2fe"],
+Cell[CellGroupData[{
+Cell[10219, 295, 2801, 62, 262, "Input",ExpressionUUID->"1c619929-9b67-46e7-914d-4da3f9e36eb1"],
+Cell[13023, 359, 446, 7, 32, "Output",ExpressionUUID->"17954ced-6d53-4e2f-8cea-ac3d1e75af28"],
+Cell[13472, 368, 430, 7, 32, "Output",ExpressionUUID->"d1e921e0-be0b-431d-9c34-19aed3c4f52f"],
+Cell[13905, 377, 444, 7, 32, "Output",ExpressionUUID->"53f21e16-51b3-4d27-8cb2-22aa2209293a"],
+Cell[14352, 386, 464, 11, 22, "Print",ExpressionUUID->"673df9f4-f50b-4deb-8e5a-4fbe8b3ff8cf"],
+Cell[14819, 399, 445, 7, 32, "Output",ExpressionUUID->"0d79dada-b6a5-4157-8185-60eeffd68fcf"],
+Cell[15267, 408, 428, 10, 22, "Print",ExpressionUUID->"54134fc0-f884-4f61-90e4-6767a3f6f96d"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15744, 424, 189, 3, 53, "Subtitle",ExpressionUUID->"85499909-3659-4b83-b667-bcec78244ef6"],
+Cell[CellGroupData[{
+Cell[15958, 431, 1457, 35, 67, "Input",ExpressionUUID->"6fafb41f-1d0f-486d-93fd-75139a496b50"],
+Cell[17418, 468, 421, 10, 22, "Print",ExpressionUUID->"27773575-f8a1-4738-80b1-2f9af67231c5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17888, 484, 174, 3, 53, "Subtitle",ExpressionUUID->"d675c867-c3c7-4daf-ba01-dfc3847af6a9"],
+Cell[CellGroupData[{
+Cell[18087, 491, 529, 12, 48, "Input",ExpressionUUID->"b7610d34-9032-447f-9269-83ed93d1bf74"],
+Cell[18619, 505, 456, 10, 22, "Print",ExpressionUUID->"f0364ec2-5497-4699-8dce-9da06666fc54"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
